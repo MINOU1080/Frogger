@@ -40,7 +40,6 @@ public:
     Matrix();
     void draw();
     void creationMatrix();
-    ~Matrix();
 
 };
 

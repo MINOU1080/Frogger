@@ -1,5 +1,5 @@
 #pragma once
-
+#include "../../Include.hpp"
 
 class Coordinate {
 
@@ -13,5 +13,21 @@ public:
     int getPositionX() const { return x; };
     int getPositionY() const { return y; };
 
+    void setPositionX(int valueX){ this->x = valueX;}
+    void setPositionY(int valueY) { this->y = valueY;}
+};
 
+enum Statut {
+    SELECTORLEVEL,
+    INGAME,
+    VICTORY,
+    LOSE,
+    END
+};
+
+enum Direction {
+    UP,
+    DOWN,
+    RIGHT,
+    LEFT
 };

@@ -20,7 +20,15 @@
 #include <memory>
 #include <random>
 #include <sstream>
-
+#include <unordered_map>
 //UTILS
 
 #include "Model/Utils/Utils.hpp"
+
+//PICTURE
+/*
+Fl_PNG_Image frogUp = "assets/Components/Frog/Up.png";
+Fl_PNG_Image frogDown = "assets/Components/Frog/Down.png";
+Fl_PNG_Image frogRight = "assets/Components/Frog/Right.png";
+Fl_PNG_Image frogLeft = "assets/Components/Frog/Left.png";
+*/

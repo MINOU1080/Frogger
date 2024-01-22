@@ -1,9 +1,10 @@
 #include "ComponentsFLTK.hpp"
 
 
-WindowFLTK::WindowFLTK(GameWindow gamewindow) : 
+WindowFLTK::WindowFLTK(GameWindow gamewindow,MainController maincontroller) : 
 Fl_Double_Window((1920-588)/2,(1080-690)/2,588,690, "Frogger"), 
-gamewindow{gamewindow}
+gamewindow{gamewindow},
+maincontroller{maincontroller}
 
 {
     Fl::add_timeout(1.0 / 60.0, Timer_CB, this);
@@ -24,7 +25,7 @@ int WindowFLTK::handle(int event){
         break;
     
     case FL_KEYDOWN:
-        break;
+        if (status == INGAME)  { maincontroller.keyboardListener(Fl::event_key(),status);}
 
     case FL_MOVE:
         break;
